@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\itemLandingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/itemLanding',[itemLandingController::class,'itemLanding'])->name('admin.item.itemlanding');
+Route::get('/createItem',[itemLandingController::class,'createItem'])->name('admin.item.createItem');
+
