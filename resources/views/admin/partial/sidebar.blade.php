@@ -96,12 +96,41 @@
             <a href="{{route('admin.item.itemlanding')}}" class="nav-link">
             <i class="fa fa-cog" aria-hidden="true"></i>
               <p>
-                Configurations
+                Item
               </p>
               
             </a>
           </li>
           
+          <li class="nav-item">
+            <a href="{{route('admin.item.itemTypesLanding')}}" class="nav-link">
+            <i class="fa fa-cubes" aria-hidden="true"></i>
+              <p>
+                Item types
+              </p>
+              
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="{{route('admin.item.itemCategoryLanding')}}" class="nav-link">
+            <i class="fa fa-cart-plus" aria-hidden="true"></i>
+              <p>
+                Category
+              </p>
+              
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="{{route('admin.supplier.supplierLanding')}}" class="nav-link">
+            <i class="fa fa-user-circle" aria-hidden="true"></i>
+              <p>
+                Supplier
+              </p>
+              
+            </a>
+          </li>
 
          
 

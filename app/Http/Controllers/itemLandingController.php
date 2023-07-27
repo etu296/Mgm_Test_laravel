@@ -17,4 +17,31 @@ class itemLandingController extends Controller
     {
         return view('admin\item\createItem');
     }
+
+    public function itemTypesLanding()
+    {
+      return view('admin\item\itemTypesLanding');
+    }
+    public function createItemTypes()
+    {
+      return view('admin\item\createItemTypes');
+    }
+    public function itemCategoryLanding()
+    {
+      $itemCetagories = Item::all();
+      return view('admin\item\itemCategoryLanding',compact('itemCetagories'));
+    }
+    public function createItemCategory()
+    {
+      return view('admin\item\createItemCategory');
+    }
+    public function storeItemCategory(Request $request)
+    {
+      Item::create([
+        'categoryCode'=>$request->categoryCode,
+        'categoryName'=>$request->categoryName,
+      ]);
+      return redirect()->route('admin.item.itemCategoryLanding');
+    }
+
 }
