@@ -12,7 +12,7 @@
     </div>
 @endif
 
-<form action="" method="POST" enctype="multipart/form-data">
+<form action="{{route('storeItemTypes')}}" method="POST" enctype="multipart/form-data">
   @csrf
   <div class="card card-warning">
 <div class="card-header">
@@ -25,15 +25,22 @@
 <div class="col-sm-6">
 <div class="form-group">
 <label>Item type code*</label>
-<input type="text" class="form-control" placeholder="Item Code">
+<input required name="itemTypeCode" type="text" class="form-control" placeholder="Item Code">
 </div>
 </div>
 
 <div class="col-sm-6">
 <div class="form-group">
-<label> Item type name*</label>
-<input type="text" class="form-control" placeholder="Item Name" >
-</div>
+<label for="exampleInputEmail1" class="form-label"> Item type name*</label>
+    <select class="form-control" name="itemTypeName" required>
+            <option value="">select</option>
+            <option value=" Finished/Trading Goods "> Finished/Trading Goods </option>
+            <option value="  Raw Material"> Raw Material</option>          
+            <option value=" Asset"> Asset</option>            
+            <option value=" Service"> Service</option>   
+            <option value=" Packging Material"> Packging Material</option>   
+            <option value=" Production tools"> Production tools</option>   
+        </select></div>
 </div>
 </div>
 <div class="row">

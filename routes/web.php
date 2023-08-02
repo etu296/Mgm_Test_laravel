@@ -23,6 +23,7 @@ Route::get('/itemLanding',[itemLandingController::class,'itemLanding'])->name('a
 Route::get('/createItem',[itemLandingController::class,'createItem'])->name('admin.item.createItem');
 Route::get('/itemTypesLanding',[itemLandingController::class,'itemTypesLanding'])->name('admin.item.itemTypesLanding');
 Route::get('/createItemTypes',[itemLandingController::class,'createItemTypes'])->name('admin.item.createItemTypes');
+Route::post('/storeItemTypes',[itemLandingController::class,'storeItemTypes'])->name('storeItemTypes');
 Route::get('/itemCategoryLanding',[itemLandingController::class,'itemCategoryLanding'])->name('admin.item.itemCategoryLanding');
 Route::get('/createItemCategory',[itemLandingController::class,'createItemCategory'])->name('admin.item.createItemCategory');
 Route::post('/storeItemCategory',[itemLandingController::class,'storeItemCategory'])->name('storeItemCategory');
@@ -30,3 +31,4 @@ Route::post('/storeItemCategory',[itemLandingController::class,'storeItemCategor
 //supplier
 Route::get('/supplierLanding',[SupplierController::class,'supplierLanding'])->name('admin.supplier.supplierLanding');
 Route::get('/createSupplier',[SupplierController::class,'createSupplier'])->name('admin.supplier.createSupplier');
+Route::post('/storeSupplier',[SupplierController::class,'storeSupplier'])->name('storeSupplier');

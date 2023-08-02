@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Item;
+use App\Models\ItemType;
+
 
 
 class itemLandingController extends Controller
@@ -17,15 +19,24 @@ class itemLandingController extends Controller
     {
         return view('admin\item\createItem');
     }
-
+    public function storeItemTypes(Request $request)
+    {
+      ItemType::create([
+        'itemTypeCode'=>$request->itemTypeCode,
+        'itemTypeName'=>$request->itemTypeName,
+      ]);
+      return redirect()->route('admin.item.itemTypesLanding');
+    }
     public function itemTypesLanding()
     {
-      return view('admin\item\itemTypesLanding');
+      $itemTypes = ItemType::all();
+      return view('admin\item\itemTypesLanding',compact('itemTypes'));
     }
     public function createItemTypes()
     {
       return view('admin\item\createItemTypes');
     }
+
     public function itemCategoryLanding()
     {
       $itemCetagories = Item::all();

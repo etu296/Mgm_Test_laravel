@@ -31,7 +31,6 @@
 
 <div class="col-sm-6">
 <div class="form-group">
-<label>Category name*</label>
 <label for="exampleInputEmail1" class="form-label">Category name*</label>
     <select class="form-control" name="categoryName">
             <option value="">select</option>

@@ -15,7 +15,20 @@
     </tr>
   </thead>
   <tbody>
-
+  @foreach($itemTypes as $key=>$itemType)
+<tr >
+      <th >{{$key+1}}</th>
+      <th>{{$itemType->itemTypeCode}}</th>
+      <th>{{$itemType->itemTypeName}}</th>
+      <th>
+        <a href="" class="btn btn-primary"><i class="fas fa-eye"></i></a>
+        <a href="" class="btn btn-warning" ><i class="fas fa-edit"></i></a>
+        <a href="" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+      </th>
+      <th>
+      </th>
+</tr>
+@endforeach
   </tbody>
 </table>
 
